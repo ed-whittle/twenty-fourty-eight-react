@@ -5,7 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial Bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   font-size: 70px;
 }
 
@@ -16,10 +17,98 @@
 
 .two {
   @extend .Cell;
-  background-color: rgb(0, 255, 255);
-}
+  color: #6f7173;
+  background-color: #fff}
 
 .four {
   @extend .Cell;
-  background-color: rgb(0, 255, 0);
+  color: #6f7173;
+  background-color: #d9eee8;
+}
+
+.eight {
+  @extend .Cell;
+  color: #fff;
+  background-color: #abdac7;
+}
+
+.sixteen {
+  @extend .Cell;
+  color: #fff;
+  background-color: #78c8a7;
+}
+
+.thirtytwo {
+  @extend .Cell;
+  color: #fff;
+  background-color: #1ab78f;
+}
+
+.sixtyfour {
+  @extend .Cell;
+  color: #fff;
+  background-color: #009d91;
+}
+
+.onetwoeight {
+  @extend .Cell;
+  color: #fff;
+  background-color: #00616c;
+  font-size: 56px;
+}
+
+.twofivesix {
+  @extend .Cell;
+  color: #fff;
+  background-color: #0089c8;
+  font-size: 56px;
+}
+
+.fivetwelve {
+  @extend .Cell;
+  color: #fff;
+  background-color: #44c8f5;
+  font-size: 56px;
+}
+
+.onezerotwofour {
+  @extend .Cell;
+  color: #fff;
+  background-color: #004895;
+  font-size: 42px;
+}
+
+.twentyfourtyeight {
+  @extend .Cell;
+  color: #fff;
+  background-color: #523c97;
+  font-size: 42px;
+}
+
+.fourzeroninesix {
+  @extend .Cell;
+  color: #fff;
+  background-color: #934b9d;
+  font-size: 42px;
+}
+
+.eightoneninetwo {
+  @extend .Cell;
+  color: #fff;
+  background-color: #d54e9c;
+  font-size: 42px;
+}
+
+.sixteenthreeeightfour {
+  @extend .Cell;
+  color: #fff;
+  background-color: #8e0053;
+  font-size: 34px;
+}
+
+.thirtytwosevensixeight {
+  @extend .Cell;
+  color: #fff;
+  background-color: #333132;
+  font-size: 34px;
 }
