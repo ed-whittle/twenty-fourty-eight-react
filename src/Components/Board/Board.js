@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Cell from "../Cell/Cell";
 import "./Board.scss";
 
-import { upArrowPress, downArrowPress, leftArrowPress, rightArrowPress } from '../../utils/handleArrowButtonPress';
-
 import KeyboardEventHandler from "react-keyboard-event-handler";
 
+import { upArrowPress, downArrowPress, leftArrowPress, rightArrowPress } from '../../utils/handleArrowButtonPress';
+import {addValueToBoard } from '../../utils/addValueToBoard';
+
 const Board = () => {
-  const [currentValues, setCurrentValues] = useState(Array(16).fill("eight"));
+  const [currentValues, setCurrentValues] = useState(addValueToBoard(Array(16).fill("blank")));
 
   return (
     <div className="board">
