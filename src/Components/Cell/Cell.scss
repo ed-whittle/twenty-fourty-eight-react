@@ -1,0 +1,25 @@
+.Cell {
+  height: 100px;
+  width: 100px;
+  border: solid 5px #bcbec0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial Bold;
+  font-size: 70px;
+}
+
+.blank {
+  @extend .Cell;
+  background-color: #d8d9da;
+}
+
+.two {
+  @extend .Cell;
+  background-color: rgb(0, 255, 255);
+}
+
+.four {
+  @extend .Cell;
+  background-color: rgb(0, 255, 0);
+}
