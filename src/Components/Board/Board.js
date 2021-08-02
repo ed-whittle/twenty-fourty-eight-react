@@ -1,37 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Cell from "../Cell/Cell";
 import "./Board.scss";
 
 import KeyboardEventHandler from "react-keyboard-event-handler";
 
-import { upArrowPress, downArrowPress, leftArrowPress, rightArrowPress } from '../../utils/handleArrowButtonPress';
-import {addValueToBoard } from '../../utils/addValueToBoard';
+import { handleArrowPress } from '../../utils/handleArrowButtonPress';
+import { addValueToBoard } from '../../utils/addValueToBoard';
+import { isGameOver } from '../../utils/checkGameOver';
 
 const Board = () => {
   const [currentValues, setCurrentValues] = useState(addValueToBoard(Array(16).fill("blank")));
+
+  useEffect(() => {
+    const gameOverFlag = isGameOver(currentValues);
+    console.log(`Game Over: ${gameOverFlag}`);
+  }, [currentValues])
 
   return (
     <div className="board">
       <KeyboardEventHandler
         handleKeys={['left', 'up', 'right', 'down']}
-        onKeyEvent={(key, e) => {
-          switch(key) {
-            case 'up':
-              upArrowPress();
-              break;
-            case 'down':
-              downArrowPress();
-              break;  
-            case 'left':
-              leftArrowPress();
-              break;  
-            case 'right':
-              rightArrowPress();
-              break;   
-            default:
-              break;                                       
-          }
-        }}
+        onKeyEvent={(key, e) => console.log(handleArrowPress(key, e, currentValues))}
       />
       <div className="board-row">
         <Cell value={currentValues[0]} />
